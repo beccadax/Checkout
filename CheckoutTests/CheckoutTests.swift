@@ -2,7 +2,7 @@
 //  CheckoutTests.swift
 //  CheckoutTests
 //
-//  Created by Brent Royal-Gordon on 11/5/17.
+//  Created by Brent Royal-Gordon on 11/6/17.
 //  Copyright © 2017 Architechies. All rights reserved.
 //
 

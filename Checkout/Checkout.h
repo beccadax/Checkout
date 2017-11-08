@@ -2,11 +2,11 @@
 //  Checkout.h
 //  Checkout
 //
-//  Created by Brent Royal-Gordon on 11/5/17.
+//  Created by Brent Royal-Gordon on 11/6/17.
 //  Copyright © 2017 Architechies. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Checkout.
 FOUNDATION_EXPORT double CheckoutVersionNumber;
@@ -15,5 +15,5 @@ FOUNDATION_EXPORT double CheckoutVersionNumber;
 FOUNDATION_EXPORT const unsigned char CheckoutVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Checkout/PublicHeader.h>
-
+#import <Checkout/LibCryptoWrapper.h>
 
