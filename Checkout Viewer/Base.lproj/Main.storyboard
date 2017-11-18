@@ -719,7 +719,7 @@
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="LHK-Za-3iZ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
                         <connections>
@@ -744,7 +744,7 @@
                 <viewController storyboardIdentifier="FallibleViewController" id="viH-BO-jYq" customClass="FallibleViewController" customModule="Checkout_Viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <containerView key="view" id="hE1-f6-ngN">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <connections>
                             <segue destination="RSM-SF-adb" kind="embed" identifier="failureViewController" id="7Nk-fd-Ia4"/>
                         </connections>
@@ -864,7 +864,7 @@
                 <viewController title="Receipt Payload" id="4Ad-wQ-CpS" customClass="ReceiptPayloadViewController" customModule="Checkout_Viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="S9Z-jA-ayJ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="42" horizontalPageScroll="10" verticalLineScroll="42" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-CL-BwC">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
