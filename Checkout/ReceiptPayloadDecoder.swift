@@ -89,7 +89,9 @@ class ReceiptPayloadDecoder {
                     return try attribute().intValue() as! T
                     
                 default:
-                    throw DecodingError.typeMismatch(type, .init(codingPath: codingPath, debugDescription: "The payload contained a type, \(type), which could not be decoded."))
+                    return try type.init(from: _Decoder(attributes: attributes, codingPath: codingPath, userInfo: decoder.userInfo))
+                    
+//                    throw DecodingError.typeMismatch(type, .init(codingPath: codingPath, debugDescription: "The payload contained a type, \(type), which could not be decoded."))
                 }
             }
             
@@ -150,7 +152,7 @@ class ReceiptPayloadDecoder {
             }
             
             func decode<T>(_ type: T.Type) throws -> T where T : Decodable {
-                return try type.init(from: _Decoder(attributes: attributes, codingPath: codingPath, userInfo: decoder.userInfo))
+                return try _decode(type)
             }
         }
         
