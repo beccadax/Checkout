@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -736,6 +738,100 @@
             </objects>
             <point key="canvasLocation" x="-209" y="749"/>
         </scene>
+        <!--Fallible View Controller-->
+        <scene sceneID="wMe-Gw-p8n">
+            <objects>
+                <viewController storyboardIdentifier="FallibleViewController" id="viH-BO-jYq" customClass="FallibleViewController" customModule="Checkout_Viewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" id="hE1-f6-ngN">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <segue destination="RSM-SF-adb" kind="embed" identifier="failureViewController" id="7Nk-fd-Ia4"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <customObject id="UZN-NW-kpP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-209" y="1365"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9jy-lC-d8Q">
+            <objects>
+                <viewController id="RSM-SF-adb" sceneMemberID="viewController">
+                    <view key="view" id="1i8-Gd-ksD">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vqi-s2-Wz6">
+                                <rect key="frame" x="20" y="79" width="410" height="143"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d78-Lw-RGx">
+                                        <rect key="frame" x="157" y="47" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="Mhr-ik-97n"/>
+                                            <constraint firstAttribute="width" secondItem="d78-Lw-RGx" secondAttribute="height" multiplier="1:1" id="i3f-iR-Fba"/>
+                                        </constraints>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSCaution" id="9t3-iM-BAx"/>
+                                    </imageView>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="FUt-s9-Vhi">
+                                        <rect key="frame" x="154" y="22" width="103" height="17"/>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Error message." id="ptL-9S-Vzz">
+                                            <font key="font" metaFont="systemBold"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="RSM-SF-adb" name="value" keyPath="representedObject.localizedDescription" id="H6B-wJ-xmb">
+                                                <dictionary key="options">
+                                                    <string key="NSNullPlaceholder">An unknown error occurred.</string>
+                                                </dictionary>
+                                            </binding>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="INe-9Y-vY8">
+                                        <rect key="frame" x="169" y="0.0" width="72" height="14"/>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Error details." id="KR3-tM-NDj">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="RSM-SF-adb" name="value" keyPath="representedObject.localizedRecoverySuggestion" id="79x-Gw-Y7w">
+                                                <dictionary key="options">
+                                                    <bool key="NSConditionallySetsHidden" value="YES"/>
+                                                </dictionary>
+                                            </binding>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vqi-s2-Wz6" secondAttribute="trailing" priority="900" constant="20" symbolic="YES" id="1tD-SD-lce"/>
+                            <constraint firstItem="vqi-s2-Wz6" firstAttribute="centerY" secondItem="1i8-Gd-ksD" secondAttribute="centerY" id="9Pi-aH-xyH"/>
+                            <constraint firstItem="vqi-s2-Wz6" firstAttribute="leading" secondItem="1i8-Gd-ksD" secondAttribute="leading" priority="900" constant="20" symbolic="YES" id="Dfr-tQ-AI3"/>
+                            <constraint firstItem="vqi-s2-Wz6" firstAttribute="centerX" secondItem="1i8-Gd-ksD" secondAttribute="centerX" id="DxL-B2-2Td"/>
+                            <constraint firstItem="vqi-s2-Wz6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1i8-Gd-ksD" secondAttribute="top" constant="20" symbolic="YES" id="OSH-9A-Zmb"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vqi-s2-Wz6" secondAttribute="bottom" constant="20" symbolic="YES" id="WPS-Rl-HEJ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vqi-s2-Wz6" secondAttribute="trailing" constant="20" symbolic="YES" id="b1N-rJ-WAX"/>
+                            <constraint firstItem="vqi-s2-Wz6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1i8-Gd-ksD" secondAttribute="leading" constant="20" symbolic="YES" id="mAf-aa-ZCC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="KUT-XO-YO6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-209" y="1801"/>
+        </scene>
         <!--Signed Container-->
         <scene sceneID="C0P-Yv-N0T">
             <objects>
@@ -950,7 +1046,7 @@
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdB-dB-vsh">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                 <clipView key="contentView" id="bZo-wx-yfe">
-                                    <rect key="frame" x="0.0" y="23" width="450" height="277"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowSizeStyle="automatic" headerView="kCq-H0-esI" viewBased="YES" indentationPerLevel="16" outlineTableColumn="UwF-xU-jY7" id="oT4-pB-h90">
@@ -1037,7 +1133,7 @@
                                     <rect key="frame" x="0.0" y="284" width="450" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ABC-Zs-1xs">
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="ABC-Zs-1xs">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -1068,4 +1164,7 @@
             <point key="canvasLocation" x="461" y="1663"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSCaution" width="32" height="32"/>
+    </resources>
 </document>

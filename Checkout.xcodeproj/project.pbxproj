@@ -218,6 +218,7 @@
 		84DCC5421FB1AB59001F1BCB /* AttributeTypeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DCC5411FB1AB59001F1BCB /* AttributeTypeFormatter.swift */; };
 		84DCC5441FB1B0A6001F1BCB /* AttributeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DCC5431FB1B0A6001F1BCB /* AttributeValueFormatter.swift */; };
 		84DCC5461FB1BC51001F1BCB /* DescriptionTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DCC5451FB1BC51001F1BCB /* DescriptionTransformer.swift */; };
+		84DCC5491FB2A2CE001F1BCB /* FallibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DCC5471FB2A2CE001F1BCB /* FallibleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -650,6 +651,7 @@
 		84DCC5411FB1AB59001F1BCB /* AttributeTypeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeTypeFormatter.swift; sourceTree = "<group>"; };
 		84DCC5431FB1B0A6001F1BCB /* AttributeValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeValueFormatter.swift; sourceTree = "<group>"; };
 		84DCC5451FB1BC51001F1BCB /* DescriptionTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTransformer.swift; sourceTree = "<group>"; };
+		84DCC5471FB2A2CE001F1BCB /* FallibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallibleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -997,6 +999,7 @@
 				84DCC5361FB19BD9001F1BCB /* SignedContainerViewController.swift */,
 				84DCC5381FB19BF5001F1BCB /* ContainerContentsViewController.swift */,
 				84DCC53A1FB19C05001F1BCB /* AppReceiptViewController.swift */,
+				84DCC5471FB2A2CE001F1BCB /* FallibleViewController.swift */,
 				84DCC4FD1FB1857C001F1BCB /* Assets.xcassets */,
 				84DCC4FF1FB1857C001F1BCB /* Main.storyboard */,
 				84DCC5021FB1857C001F1BCB /* Info.plist */,
@@ -1385,6 +1388,7 @@
 				84DCC4FC1FB1857C001F1BCB /* Document.swift in Sources */,
 				84DCC5371FB19BD9001F1BCB /* SignedContainerViewController.swift in Sources */,
 				84DCC5401FB1AB12001F1BCB /* ReceiptPayloadDataSource.swift in Sources */,
+				84DCC5491FB2A2CE001F1BCB /* FallibleViewController.swift in Sources */,
 				84DCC5461FB1BC51001F1BCB /* DescriptionTransformer.swift in Sources */,
 				84DCC5261FB18982001F1BCB /* Fallible.swift in Sources */,
 			);

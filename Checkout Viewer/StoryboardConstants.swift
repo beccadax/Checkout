@@ -14,6 +14,11 @@ extension NSStoryboard.Name {
 
 extension NSStoryboard.SceneIdentifier {
     static let documentWindowController = NSStoryboard.SceneIdentifier("Document Window Controller")
+    static let fallibleViewController = NSStoryboard.SceneIdentifier("FallibleViewController")
+}
+
+extension NSStoryboardSegue.Identifier {
+    static let failureViewController = NSStoryboardSegue.Identifier("failureViewController")
 }
 
 extension NSUserInterfaceItemIdentifier {
