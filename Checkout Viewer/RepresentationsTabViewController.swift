@@ -29,4 +29,20 @@ class RepresentationsTabViewController: NSTabViewController {
             }
         }
     }
+    
+    func wrapViewControllerIfNeeded(in tabViewItem: NSTabViewItem) {
+        if tabViewItem.viewController is FallibleViewController {
+            return
+        }
+        
+        let fallibleController = storyboard!.instantiateController(withIdentifier: .fallibleViewController) as! FallibleViewController
+        fallibleController.successViewController = tabViewItem.viewController as! (NSViewController & RepresentationViewController)?
+        
+        tabViewItem.viewController = fallibleController
+    }
+    
+    override func addTabViewItem(_ tabViewItem: NSTabViewItem) {
+        wrapViewControllerIfNeeded(in: tabViewItem)
+        super.addTabViewItem(tabViewItem)
+    }
 }

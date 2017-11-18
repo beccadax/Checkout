@@ -23,7 +23,7 @@ class ReceiptPayloadViewController: NSViewController, RepresentationViewControll
     }
     
     func update() {
-        guard case .success(let payload)? = (representedObject as! Fallible<ReceiptPayload>?) else {
+        guard let payload = representedObject as? ReceiptPayload else {
             dataSource?.root = nil
             return
         }
