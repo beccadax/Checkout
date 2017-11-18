@@ -838,7 +838,7 @@
                 <viewController title="Signed Container" id="J3k-vY-u8H" customClass="SignedContainerViewController" customModule="Checkout_Viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="g5n-gA-uwh">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>
                 <customObject id="kZx-ls-grN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -851,7 +851,7 @@
                 <viewController title="Container Contents" id="dID-YK-kLL" customClass="ContainerContentsViewController" customModule="Checkout_Viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ExF-gF-f1n">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>
                 <customObject id="yxQ-nc-cNQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1041,7 +1041,7 @@
                 <viewController title="App Receipt" id="eFL-vh-7ow" customClass="AppReceiptViewController" customModule="Checkout_Viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="NXn-I3-sGN">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdB-dB-vsh">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
