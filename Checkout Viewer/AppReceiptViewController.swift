@@ -43,7 +43,8 @@ class MirrorDataSource: NSObject, NSOutlineViewDataSource {
     }
     
     func children(of parent: Mirror.Child) -> Mirror.Children {
-        return Mirror(reflecting: parent.value).children
+        let realValue = deSwiftValueIfNeeded(parent.value)
+        return Mirror(reflecting: realValue).children
     }
     
     func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
@@ -58,7 +59,9 @@ class MirrorDataSource: NSObject, NSOutlineViewDataSource {
         
         // XXX Need to figure out how we're handling errors!
         let indices = self.indices(from: item)
-        return Int(children(of: child(at: indices)).count)
+        let parent = child(at: indices)
+        let children = self.children(of: parent)
+        return Int(children.count)
     }
     
     func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {

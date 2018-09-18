@@ -103,6 +103,8 @@
 		84992EA71FB1424100EF483F /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84992EA61FB1423600EF483F /* libssl.a */; };
 		84992EA91FB1488900EF483F /* PayloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84992EA81FB1488900EF483F /* PayloadTests.swift */; };
 		84992EAB1FB14F4E00EF483F /* ReceiptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84992EAA1FB14F4E00EF483F /* ReceiptTests.swift */; };
+		84AF4FEA1FC05EA60000EF28 /* _SwiftValue+any.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4FE91FC05EA60000EF28 /* _SwiftValue+any.m */; };
+		84AF4FEC1FC060A90000EF28 /* _SwiftValue+any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4FEB1FC060A90000EF28 /* _SwiftValue+any.swift */; };
 		84DCC3151FB17AE6001F1BCB /* Apple.cer in Resources */ = {isa = PBXBuildFile; fileRef = 8433B9C41FB01848008C1CC3 /* Apple.cer */; };
 		84DCC3161FB17AE6001F1BCB /* Checkout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8433B89D1FAFE5FA008C1CC3 /* Checkout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84DCC3171FB17AE6001F1BCB /* CheckoutError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433B9C61FB018A4008C1CC3 /* CheckoutError.swift */; };
@@ -547,6 +549,10 @@
 		84992EA61FB1423600EF483F /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		84992EA81FB1488900EF483F /* PayloadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadTests.swift; sourceTree = "<group>"; };
 		84992EAA1FB14F4E00EF483F /* ReceiptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTests.swift; sourceTree = "<group>"; };
+		84AF4FE71FC05EA50000EF28 /* Checkout Viewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Checkout Viewer-Bridging-Header.h"; sourceTree = "<group>"; };
+		84AF4FE81FC05EA60000EF28 /* _SwiftValue+any.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "_SwiftValue+any.h"; sourceTree = "<group>"; };
+		84AF4FE91FC05EA60000EF28 /* _SwiftValue+any.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_SwiftValue+any.m"; sourceTree = "<group>"; };
+		84AF4FEB1FC060A90000EF28 /* _SwiftValue+any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_SwiftValue+any.swift"; sourceTree = "<group>"; };
 		84DCC36F1FB1830C001F1BCB /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		84DCC3701FB1830C001F1BCB /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		84DCC4561FB184E6001F1BCB /* evp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evp.h; sourceTree = "<group>"; };
@@ -999,11 +1005,15 @@
 				84DCC5361FB19BD9001F1BCB /* SignedContainerViewController.swift */,
 				84DCC5381FB19BF5001F1BCB /* ContainerContentsViewController.swift */,
 				84DCC53A1FB19C05001F1BCB /* AppReceiptViewController.swift */,
+				84AF4FE81FC05EA60000EF28 /* _SwiftValue+any.h */,
+				84AF4FE91FC05EA60000EF28 /* _SwiftValue+any.m */,
+				84AF4FEB1FC060A90000EF28 /* _SwiftValue+any.swift */,
 				84DCC5471FB2A2CE001F1BCB /* FallibleViewController.swift */,
 				84DCC4FD1FB1857C001F1BCB /* Assets.xcassets */,
 				84DCC4FF1FB1857C001F1BCB /* Main.storyboard */,
 				84DCC5021FB1857C001F1BCB /* Info.plist */,
 				84DCC5031FB1857C001F1BCB /* Checkout_Viewer.entitlements */,
+				84AF4FE71FC05EA50000EF28 /* Checkout Viewer-Bridging-Header.h */,
 			);
 			path = "Checkout Viewer";
 			sourceTree = "<group>";
@@ -1221,6 +1231,7 @@
 					};
 					84DCC4F41FB1857C001F1BCB = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					84DCC5071FB1857C001F1BCB = {
@@ -1377,6 +1388,8 @@
 				84DCC5281FB189AF001F1BCB /* CheckoutViewerError.swift in Sources */,
 				84DCC53E1FB1AAED001F1BCB /* PayloadOutline.swift in Sources */,
 				84DCC5441FB1B0A6001F1BCB /* AttributeValueFormatter.swift in Sources */,
+				84AF4FEA1FC05EA60000EF28 /* _SwiftValue+any.m in Sources */,
+				84AF4FEC1FC060A90000EF28 /* _SwiftValue+any.swift in Sources */,
 				84DCC53B1FB19C05001F1BCB /* AppReceiptViewController.swift in Sources */,
 				84DCC4F81FB1857C001F1BCB /* AppDelegate.swift in Sources */,
 				84DCC5331FB1965A001F1BCB /* ReceiptPayloadViewController.swift in Sources */,
@@ -1763,6 +1776,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Checkout Viewer/Checkout_Viewer.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1774,6 +1788,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.architechies.cocoa.Checkout-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Checkout Viewer/Checkout Viewer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1783,6 +1799,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Checkout Viewer/Checkout_Viewer.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1794,6 +1811,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.architechies.cocoa.Checkout-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Checkout Viewer/Checkout Viewer-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
